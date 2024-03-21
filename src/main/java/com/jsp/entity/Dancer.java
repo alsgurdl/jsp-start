@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Dancer {
+
     public enum DanceLevel {
         BEGINNER("초보", 50000),
         AMATEUR("아마추어", 100000),
@@ -44,11 +45,11 @@ public class Dancer {
             return genreDescription;
         }
     }
-
-    private String name;
-    private  String crewName;
-    private DanceLevel danceLevel;
-    private List<Genre> genres;
+    
+    private String name; // 댄서 이름
+    private String crewName; // 댄서 팀 이름
+    private DanceLevel danceLevel; // 댄서 실력 등급
+    private List<Genre> genres; // 댄서의 장르리스트
 
     public Dancer() {}
 
@@ -104,7 +105,6 @@ public class Dancer {
         return Objects.hash(name, crewName, danceLevel, genres);
     }
 
-
     @Override
     public String toString() {
         return "Dancer{" +
@@ -115,3 +115,14 @@ public class Dancer {
                 '}';
     }
 }
+
+
+
+
+
+
+
+
+
+
+

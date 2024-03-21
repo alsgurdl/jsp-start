@@ -8,14 +8,14 @@ import java.util.List;
 import java.util.Map;
 
 public class DancerRepository {
-    private static final Map<String, Dancer> dancerMap = new HashMap<>();
 
+    // DB 역할을 할 static final Map -> 나중에는 진짜 DB로 할게요;;
+    private static final Map<String, Dancer> dancerMap = new HashMap<>();
 
     // 댄서 저장 기능
     public static void save(String name, String crewName,
                      String danceLevel, String[] genresArray) {
         // Dancer 객체로 포장
-
         Dancer dancer = new Dancer();
         dancer.setName(name);
         dancer.setCrewName(crewName);
@@ -32,7 +32,7 @@ public class DancerRepository {
         System.out.println("dancer = " + dancer);
 
 
-        // dancerList에 저장
+        // dancerMap에 저장
         dancerMap.put(name, dancer);
     }
 
@@ -52,11 +52,8 @@ public class DancerRepository {
     }
 
     // 댄서 맵에서 댄서 객체를 삭제하는 기능
-    public void delete(String name) {
+    public static void delete(String name) {
         dancerMap.remove(name);
     }
-
-
-
 
 }

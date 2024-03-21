@@ -1,4 +1,4 @@
-package com.jsp.chop02;
+package com.jsp.chap02;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,3 +42,14 @@ public class DancerRegisterViewServlet extends HttpServlet {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
